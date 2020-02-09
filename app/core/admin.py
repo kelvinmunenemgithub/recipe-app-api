@@ -31,7 +31,7 @@ class TagAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(models.Ingredent)
+@admin.register(models.Ingredient)
 class TagAdmin(admin.ModelAdmin):
     pass
 
