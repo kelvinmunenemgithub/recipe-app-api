@@ -34,3 +34,8 @@ class TagAdmin(admin.ModelAdmin):
 @admin.register(models.Ingredent)
 class TagAdmin(admin.ModelAdmin):
     pass
+
+
+@admin.register(models.Recipe)
+class TagAdmin(admin.ModelAdmin):
+    pass
