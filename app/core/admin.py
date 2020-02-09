@@ -24,3 +24,13 @@ class UserAdmin(BaseUserAdmin):
             'fields': ('email', 'password1', 'password2')
         }),
     )
+
+
+@admin.register(models.Tag)
+class TagAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(models.Ingredent)
+class TagAdmin(admin.ModelAdmin):
+    pass
