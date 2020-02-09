@@ -1,13 +1,13 @@
 from django.contrib.auth import get_user_model
-from djago.urls import reverse
+from django.urls import reverse
 from django.test import TestCase
 
 from rest_framework import status
-from test_framework.test import APIClient
+from rest_framework.test import APIClient
 
 from core.models import Ingredient
 
-from recipe.serializers import IngredientSerializer
+from recipe.serializers import IngredientsSerializer
 
 INGREDIENT_URL = reverse('recipe:ingredient-list')
 
@@ -22,7 +22,7 @@ class PublicINgredientsApiTests(TestCase):
         """Test that login is required to access the endpoint"""
         res = self.client.get(INGREDIENT_URL)
 
-        self.assettEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
+        self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
 
 class PrivateIngredientsApiTests(TestCase):

@@ -12,7 +12,7 @@ class TagSerializer(serializers.ModelSerializer):
         read_only_fields = ('id',)
 
 
-class IngredientSerializer(serializers.ModelSerializer):
+class IngredientsSerializer(serializers.ModelSerializer):
     """Serializer for ingredient objects"""
 
     class Meta:
@@ -40,5 +40,14 @@ class RecipeSerializer(serializers.ModelSerializer):
 
 class RecipeDetailSerializer(RecipeSerializer):
     """Serializer a recipe detail"""
-    ingredients = IngredientSerializer(many=True, read_only=True)
+    ingredients = IngredientsSerializer(many=True, read_only=True)
     tags = TagSerializer(many=True, read_only=True)
+
+
+class RecipeImageSerializer(serializers.ModelSerializer):
+    """Serializer for uploading images to recipes"""
+
+    class Meta:
+        model = Recipe
+        fields = ('id', 'image')
+        read_only_fields = ('id',)
