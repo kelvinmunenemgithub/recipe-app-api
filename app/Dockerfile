@@ -2,7 +2,6 @@ FROM python:3.7-alpine
 MAINTAINER Kelvin Munene
 
 ENV PYTHONUNBUFFERED 1
-ENV PYTHONBUFFERED 1
 ENV LANG C.UTF-8
 
 COPY ./requirements.txt /requirements.txt
