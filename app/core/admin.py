@@ -32,10 +32,10 @@ class TagAdmin(admin.ModelAdmin):
 
 
 @admin.register(models.Ingredient)
-class TagAdmin(admin.ModelAdmin):
+class IngredientAdmin(admin.ModelAdmin):
     pass
 
 
 @admin.register(models.Recipe)
-class TagAdmin(admin.ModelAdmin):
+class RecipeAdmin(admin.ModelAdmin):
     pass
